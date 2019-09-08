@@ -1,44 +1,49 @@
 # Soldiers exercises
 
-Przećwicz z żołnierzami musztrę
+Przećwicz z żołnierzami musztrę.
+Wczuj się w rolę dowodzącego.
 
 Dzisiaj jest idealny dzień na trening.
 
 Wojsko może mieć bardzo dużo różnych układów.
-Najłatwiej zacząć od poniższego.
 Nie ma ograniczonej liczby żołnierzy
 ich liczba i umieszczenie może być różne.
-```
-field=[
+
+```↑ ```- reprezentuje pojedyńczego żołnierza i jego kierunek w jakim patrzy
+
+```" "``` - puste miejsce na które może wejść żółnierz
+
+```[
 [" "," "," "," "," "," "," "],
 [" "," "," "," "," "," "," "],
-[" "," ","↑","↑","↑"," "," "],
-[" "," ","↑","↑","↑"," "," "],
-[" "," ","↑","↑","↑"," "," "],
+[" "," "," "," "," "," "," "],
+[" "," "," "," "," "," "," "],
+[" "," "," "," "," "," "," "],
 [" "," "," "," "," "," "," "],
 [" "," "," "," "," "," "," "]
 ]
 ```
+ -Pole po jakim poruszają się żólnierze
 
-↑ - reprezentuje pojedyńczego żołnierza i jego kierunek w jakim patrzy
-" " - puste pole na które może wejść żółnierz
+------------------------------------------
+Komunikujesz się z wojskiem za pomoca poniższych komend:
 
 Bazowe komendy:
-"Turn left!",
-"Turn right!",
-"Turn backward!",
-"Go forward!",
-"Go forward n step!",
-"Turn to me!" - wszyscy odwracają się do Ciebie czyli na górę planszy
-"Go scatter" - rozproszyć się
+- "Turn left!",
+- "Turn right!",
+- "Turn backward!",
+- "Go forward!",
+- "Go forward n step!",
+- "Turn to me!" - wszyscy odwracają się do Ciebie czyli na górę planszy
+- "Go scatter" - rozproszyć się
 
 Jest możliwe także wydawanie rozkazów poszczególnym kolumnom i rzędom:
-"nth row, ",
-"nth column, ",
-"Even rows, ",
-"Even columns, ",
-"Odd rows, ",
-"Odd columns, "
+- "nth row, ",
+- "nth column, ",
+- "Even rows, ",
+- "Even columns, ",
+- "Odd rows, ",
+- "Odd columns, "
 Te komendy są wstawiane na początku rozkazów dla wojska.
 Na przykład:
 
@@ -107,5 +112,7 @@ command:"3rd row, Go left!"
 kolumna-> 1   2   3
 ```
 
-Jeżeli na pole na które powinien wejść
+`Ważne`
+- Jeżeli na pole na które powinien wejść
 żółnierz jest zajęte to nie wykonuje danego rozkazu.
+- Gdy rozkaz wymaga wyjście poza pole wtedy także komenda nie jest wykonywana.
