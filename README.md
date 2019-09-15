@@ -23,7 +23,14 @@ ich liczba i umieszczenie może być różne.
 [" "," "," "," "," "," "," "]
 ]
 ```
- -Pole po jakim poruszają się żólnierze
+ -Pole po jakim poruszają się żołnierze
+
+Aby uruchomić program najpierw:
+
+```
+pipenv install
+pipenv run orders
+```
 
 ------------------------------------------
 Komunikujesz się z wojskiem za pomoca poniższych komend:
