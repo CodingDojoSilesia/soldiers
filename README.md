@@ -28,7 +28,7 @@ ich liczba i umieszczenie może być różne.
 Aby uruchomić program najpierw:
 
 ```
-pipenv install
+pipenv install --dev
 pipenv run orders
 ```
 
