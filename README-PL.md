@@ -37,9 +37,7 @@ ich liczba i umieszczenie może być różne.
 ------------------------------------------
 
 
-Komunikujesz się z wojskiem za pomoca poniższych komend:
-
-W zależności od zaawansowania żołnierze potrafią reagować na różne komendy:
+W zależności od zaawansowania żołnierze potrafią reagować na różne komendy.
 
 Początkowe położenie żołnierzy to:
 ```
@@ -54,14 +52,15 @@ Początkowe położenie żołnierzy to:
 ]
 ```
 
-#### Żółtodzioby:
+#### Greenhorn:
 
-Żółtodzioby są słabo wytrenowanie i mogą wchodzić na siebie.
-Zdarza im się także wychodzić poza pole do ćwiczeń i nie wracać.
+Corporal wiedzą, że na pole gdzie ktoś już stoi nie powinno sie się wchodzić.
+Stoją w miejscu, gdy rozkaz wymaga wejścia na kogoś.
+Zdarza im się jednak wychodzić poza pole do ćwiczeń i nie wracać.
 
-- "Turn left!" - `←` wszyscy odwracają się w lewo
-- "Turn right!" -  `→` wszyscy odwracają się w prawo,
-- "Turn backward!" -  `↓` wszyscy odwracają się do tyłu,
+- "Turn West!" - `←` wszyscy odwracają się w lewo
+- "Turn East!" -  `→` wszyscy odwracają się w prawo,
+- "Turn South!" -  `↓` wszyscy odwracają się do tyłu,
 - "Go forward!" - wszyscy idą o jeden krok w kierunku jakim są zwróceni
 - "Go forward n step!", - wszyscy idą o `n` kroków w kierunku jakim są zwróceni
 - "Turn to me!" - `↑` wszyscy odwracają się do dowodzącego czyli na górę planszy
@@ -69,14 +68,12 @@ Zdarza im się także wychodzić poza pole do ćwiczeń i nie wracać.
   - losowo wybrany element planszy,
   - odwróceni w losowym kierunku
 
-#### Szeregowi:
+#### Corporal:
 
-Żółtodzioby po poznaniu wszystkich komend stają się szeregowymi.
-Szeregowi wiedzą, że na pole gdzie ktoś już stoi nie powinno sie się wchodzić.
-Stoją w miejscu, gdy rozkaz wymaga wejścia na kogoś.
+Greenhorn po poznaniu wszystkich komend stają się corporal.
 
 Są wytrwali i nigdy nie uciekają z pola ćwiczeń.
-Gdy rozkaz wymaga wyjścia poza pole do ćwiczeń to stawają na ostatnim możliwym polu.
+Gdy rozkaz wymaga wyjścia poza pole to stawają na ostatnim możliwym polu.
 
 Poza tym potrafią rozpoznawać do którego rzędu lub kolumny należą.
 
@@ -129,12 +126,41 @@ command:"3rd row, Go right!"
 kolumna-> 1   2   3
 ```
 
-### Wyjadacze
-Wyjadacze mają lepsze zoreintowanie w kierunkach. Potrafią wszystko co źółtodzioby i szeregowi.
-Różnią się od nich tym, że obracają się w kierunkach względem aktualnego położenia.
+### Sergeant
+Sergeant potrafi wszystko co greenhorn i corporal.
+Mają szczególną umiejętność jaką jest rozpoznawanie kierunków.
+Potrafią obracać się w kierunkach względem aktualnego położenia.
 
-Gdy dajesz im komendę `Turn left` to idą
-w lewo względem aktualnego kierunku w którym patrzy.
+- "Turn left!"
+- "Turn right!"
+- "Turn backward!"
+
+Na przykład
+
+```
+[" "," "," "," "," "," "," "]
+[" "," "," "," "," "," "," "]
+[" "," "," "," "," "," "," "]
+[" "," ","↑","↑","↑"," "," "]
+[" "," ","↓","↓","↓"," "," "]
+[" "," ","↓","↓","↓"," "," "]
+[" "," "," "," "," "," "," "]
+```
+"Turn left!"
+```
+[" "," "," "," "," "," "," "]
+[" "," "," "," "," "," "," "]
+[" "," "," "," "," "," "," "]
+[" "," ","←","←","←"," "," "]
+[" "," ","→","→","→"," "," "]
+[" "," ","→","→","→"," "," "]
+[" "," "," "," "," "," "," "]
+```
+
+Rozpoznają także komendy:
+
+- "Stand still!" - każda następna komenda jest ignorowana
+- "Move your asses!" - żołnierze przestają ignorować komendy
 
 Zadanie zostało stworzone na podstawie:
 https://www.codewars.com/kata/57e23d378a8b8de758000b41
