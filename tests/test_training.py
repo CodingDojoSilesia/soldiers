@@ -1,7 +1,7 @@
 from src.training import train, transform_to_str, init
 
 def test_init():
-    assert init() = [
+    assert init() == [
         [" ", " ", " ", " ", " ", " ", " "],
         [" ", " ", " ", " ", " ", " ", " "],
         [" ", " ", "↓", "↓", "↓", " ", " "],
@@ -27,7 +27,7 @@ def test_transform_to_str():
 
 
 def test_train_with_order_turn_on_me():
-    soldiers = [
+    field = [
         [" ", " ", " ", " ", " ", " ", " "],
         [" ", " ", " ", " ", " ", " ", " "],
         [" ", " ", "↓", "↓", "↓", " ", " "],
@@ -36,7 +36,7 @@ def test_train_with_order_turn_on_me():
         [" ", " ", " ", " ", " ", " ", " "],
         [" ", " ", " ", " ", " ", " ", " "],
     ]
-    result = train("Turn on me!", soldiers)
+    result = train("Turn on me!", field)
 
     expected_result = [
         [" ", " ", " ", " ", " ", " ", " "],
