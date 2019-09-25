@@ -3,11 +3,21 @@
 Aby uruchomić program najpierw:
 
 ```
-pipenv install --dev
+pip install pipenv
+
 pipenv run orders
 ```
 
-Pojawi się program do zarządzania wojskiem
+Pojawi się program do zarządzania wojskiem.
+Wprowadzasz klawiaturą komendy tekstowe i widzisz w konsoli jak żółnierze zinterpretowali Twój rozkaz.
+Na początku ćwiczysz żóltodziobów, którzy nie mają pojęcia co do nich mówisz.
+Twoim zadaniem jest nauczenie ich co znaczą poszczególne komendy.
+
+Możesz z nimi ćwiczyć pojedyńcze komendy przez testy:
+```
+pipenv install --dev
+pipenv run tests
+```
 
 ------------------------------------------
 
@@ -52,9 +62,9 @@ Początkowe położenie żołnierzy to:
 ]
 ```
 
-#### Greenhorn:
+#### Greenhorns:
 
-Corporal wiedzą, że na pole gdzie ktoś już stoi nie powinno sie się wchodzić.
+Greenhorn wiedzą, że na pole gdzie ktoś już stoi nie powinno sie się wchodzić.
 Stoją w miejscu, gdy rozkaz wymaga wejścia na kogoś.
 Zdarza im się jednak wychodzić poza pole do ćwiczeń i nie wracać.
 
@@ -66,9 +76,10 @@ Zdarza im się jednak wychodzić poza pole do ćwiczeń i nie wracać.
 - "Turn to me!" - `↑` wszyscy odwracają się do dowodzącego czyli na górę planszy
 - "Go scatter" - rozproszyć się - wszyscy zmieniają położenie:
   - losowo wybrany element planszy,
-  - odwróceni w losowym kierunku
+  - odwróceni w losowym kierunku,
+  - nie jest zabrionione by powrócił na swoje poprzednie miejsce i kierunek patrzenia.
 
-#### Corporal:
+#### Corporals:
 
 Greenhorn po poznaniu wszystkich komend stają się corporal.
 
@@ -104,8 +115,8 @@ kol   1   2       3   4
 
 Dzięki temu są w stanie rozpoznawać więcej komend:
 
-- "1th row, ", "2nd row, ", "3rd row, ", "nth row",
-- "1th column, ", "2nd column, ", "3rd column, ",
+- "1st row, ", "2nd row, ", "3rd row, ", "nth row",
+- "1st column, ", "2nd column, ", "3rd column, ", "nth column"
 - "Even rows, ",
 - "Even columns, ",
 - "Odd rows, ",
@@ -113,7 +124,7 @@ Dzięki temu są w stanie rozpoznawać więcej komend:
 
 Te komendy są wstawiane na początku rozkazów dla wojska:
 
-command:"3rd row, Go right!"
+command:"3rd row, Go East!"
 ```
 [" "," "," "," "," "," "," "] wiersz
 [" "," "," "," "," "," "," "]  |
@@ -126,7 +137,7 @@ command:"3rd row, Go right!"
 kolumna-> 1   2   3
 ```
 
-### Sergeant
+### Sergeants
 Sergeant potrafi wszystko co greenhorn i corporal.
 Mają szczególną umiejętność jaką jest rozpoznawanie kierunków.
 Potrafią obracać się w kierunkach względem aktualnego położenia.
@@ -161,6 +172,8 @@ Rozpoznają także komendy:
 
 - "Stand still!" - każda następna komenda jest ignorowana
 - "Move your asses!" - żołnierze przestają ignorować komendy
+
+Możesz oczywiście wybrać wiersz lub kolumnę dla tych komend.
 
 Zadanie zostało stworzone na podstawie:
 https://www.codewars.com/kata/57e23d378a8b8de758000b41
