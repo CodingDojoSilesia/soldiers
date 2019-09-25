@@ -124,14 +124,14 @@ Dzięki temu są w stanie rozpoznawać więcej komend:
 
 Te komendy są wstawiane na początku rozkazów dla wojska:
 
-command:"3rd row, Go East!"
+command:"3rd row, Turn East!"
 ```
 [" "," "," "," "," "," "," "] wiersz
 [" "," "," "," "," "," "," "]  |
 [" "," "," "," "," "," "," "]  v
 [" "," ","↑","↑","↑"," "," "]  1
 [" "," ","↑","↑","↑"," "," "]  2
-[" "," "," ","→","→","→"," "]  3
+[" "," ","→","→","→"," "," "]  3
 [" "," "," "," "," "," "," "]
           |   |   |
 kolumna-> 1   2   3

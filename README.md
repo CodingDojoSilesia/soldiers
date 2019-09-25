@@ -123,7 +123,7 @@ Thanks to this they are able to recognize more commands:
 
 These commands are inserted at the beginning of the military orders:
 
-command:"3rd row, Go East!"
+command:"3rd row, Turn East!"
 ```
 [" "," "," "," "," "," "," "] row
 [" "," "," "," "," "," "," "]  |
